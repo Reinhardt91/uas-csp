@@ -1,0 +1,11 @@
+{
+  "users": [
+    { "id": 1, "username": "Reinhardt", "password": "userpass", "role": "user" },
+    { "id": 2, "username": "Samuel", "password": "adminpass", "role": "admin" }
+  ],
+  "products": [
+    { "id": 1, "nama_produk": "Laptop A", "harga_satuan": 12000000, "quantity": 5 },
+    { "id": 2, "nama_produk": "Mouse B", "harga_satuan": 150000, "quantity": 20 },
+    { "id": 3, "nama_produk": "Keyboard C", "harga_satuan": 300000, "quantity": 10 }
+  ]
+}

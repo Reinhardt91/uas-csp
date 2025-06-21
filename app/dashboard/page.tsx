@@ -123,7 +123,6 @@ export default function DashboardPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-16">
             <div className="flex items-center">
-              <h1 className="text-xl font-semibold">Dashboard</h1>
             </div>
             <div className="flex items-center space-x-4">
               <span className="text-gray-800">
@@ -148,8 +147,8 @@ export default function DashboardPage() {
 
           <div className="bg-white p-6 rounded-lg shadow">
             <div className="flex justify-between items-center mb-4">
-              <h3 className="text-lg font-semibold">
-                {user.role === 'admin' ? 'Product Management' : 'Product Catalog'}
+              <h3 className="text-lg font-nold text-gray-500">
+                {user.role === 'admin' ? 'Product Managemnt' : 'Product Catalog'}
               </h3>
               {user.role === 'admin' && (
                 <button onClick={() => setShowAddForm(true)} className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">Add Product</button>)}
@@ -257,7 +256,7 @@ function ProductModal({
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
       <div className="bg-white p-6 rounded-lg w-96 max-w-full mx-4">
-        <h3 className="text-lg font-semibold mb-4">
+        <h3 className="text-lg font-semibold text-gray-500 mb-4">
           {product ? 'Edit Product' : 'Add Product'}
         </h3>
         <form onSubmit={handleSubmit} className="space-y-4">
@@ -268,7 +267,7 @@ function ProductModal({
             <input
               type="text"
               required
-              className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              className="w-full border border-gray-300 rounded-md px-3 py-2 text-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500"
               value={formData.nama_produk}
               onChange={(e) => setFormData({ ...formData, nama_produk: e.target.value })}
             />
@@ -281,7 +280,7 @@ function ProductModal({
               type="number"
               required
               min="1"
-              className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              className="w-full border border-gray-300 rounded-md px-3 py-2  text-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500"
               value={formData.harga_satuan}
               onChange={(e) => setFormData({ ...formData, harga_satuan: parseInt(e.target.value) || 0 })}
             />
@@ -294,7 +293,7 @@ function ProductModal({
               type="number"
               required
               min="0"
-              className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              className="w-full border border-gray-300 rounded-md px-3 py-2 text-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500"
               value={formData.quantity}
               onChange={(e) => setFormData({ ...formData, quantity: parseInt(e.target.value) || 0 })}
             />
